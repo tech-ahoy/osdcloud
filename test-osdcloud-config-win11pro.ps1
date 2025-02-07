@@ -61,6 +61,7 @@ $Global:MyOSDCloud = [ordered]@{
     WindowsUpdate = [bool]$true
     WindowsUpdateDrivers = [bool]$true
     WindowsDefenderUpdate = [bool]$true
+    MSCatalogFirmware = [bool]$true
     SetTimeZone = [bool]$true
     ClearDiskConfirm = [bool]$true
     ShutdownSetupComplete = [bool]$false
@@ -99,8 +100,8 @@ write-host "OSDCloud Process Complete, Running Custom Actions From Script Before
 
 function New-SetupCompleteOSDCloudFiles{
         
-$SetupCompletePath = "C:\OSDCloud\Scripts\SetupComplete"
-$ScriptsPath = $SetupCompletePath
+        $SetupCompletePath = "C:\OSDCloud\Scripts\SetupComplete"
+        $ScriptsPath = $SetupCompletePath
 
         if (!(Test-Path -Path $ScriptsPath)){New-Item -Path $ScriptsPath -ItemType Directory -Force | Out-Null}
 
@@ -123,12 +124,12 @@ $ScriptsPath = $SetupCompletePath
         #Create PowerShell File to do actions
 
         New-Item -Path $PSFilePath -ItemType File -Force
-        Add-Content -path $PSFilePath "Write-Output 'Downloading and installing NinjaOne agent'"
-        #Add-Content -path $PSFilePath "Write-Output '$ta_app_download_url = '"
-        #Add-Content -path $PSFilePath 'if ((Test-WebConnection) -ne $true){Write-error "No Internet, Sleeping 2 Minutes" ; start-sleep -seconds 120}'
-        Add-Content -path $PSFilePath 'Invoke-WebRequest https://techahoy-tools.s3-eu-west-2.amazonaws.com/ninja/ninja-windows-zztemporg.msi -OutFile "ninja-windows-zztemporg.msi"'
-        Add-Content -path $PSFilePath 'Start-Process -Wait -FilePath C:\OSDCloud\Scripts\SetupComplete\ninja-windows-zztemporg.msi -ArgumentList "/qn"'
+        Add-Content -path $PSFilePath "Write-Output 'Starting SetupComplete TyDoneRight Script Process'"
+        Add-Content -path $PSFilePath "Write-Output 'Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/tech-ahoy/osdcloud/refs/heads/main/SetupComplete.ps1)'"
+        Add-Content -path $PSFilePath 'if ((Test-WebConnection) -ne $true){Write-error "No Internet, Sleeping 2 Minutes" ; start-sleep -seconds 120}'
+        Add-Content -path $PSFilePath 'Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/tech-ahoy/osdcloud/refs/heads/main/SetupComplete.ps1)'
     }
+    #endregion
 
 Write-Host "OSDCloud process complete, running custom actions from script before reboot"
 
