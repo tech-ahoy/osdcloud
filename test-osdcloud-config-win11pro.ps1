@@ -98,7 +98,7 @@ write-host "OSDCloud Process Complete, Running Custom Actions From Script Before
 
 #region Post OSDCloud, do more things in WinPE before you reboot.
 
-function New-SetupCompleteOSDCloudFiles{
+<#function New-SetupCompleteOSDCloudFiles{
         
         $SetupCompletePath = "C:\OSDCloud\Scripts\SetupComplete"
         $ScriptsPath = $SetupCompletePath
@@ -129,13 +129,13 @@ function New-SetupCompleteOSDCloudFiles{
         Add-Content -path $PSFilePath 'if ((Test-WebConnection) -ne $true){Write-error "No Internet, Sleeping 2 Minutes" ; start-sleep -seconds 120}'
         Add-Content -path $PSFilePath 'Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/tech-ahoy/osdcloud/refs/heads/main/SetupComplete.ps1)'
     }
-    #endregion
+    #endregion #>
 
 Write-Host "OSDCloud process complete, running custom actions from script before reboot"
 
 Write-Host "Creating custom SetupComplete files"
 
-New-SetupCompleteOSDCloudFiles
+#New-SetupCompleteOSDCloudFiles
 
 <#Copy CMTrace Local:(I always add CMTrace to my boot images)
 if (Test-path -path "x:\windows\system32\cmtrace.exe"){
