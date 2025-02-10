@@ -58,9 +58,9 @@ $Global:MyOSDCloud = [ordered]@{
     Restart = [bool]$false
     RecoveryPartition = [bool]$true
     OEMActivation = [bool]$true
-    WindowsUpdate = [bool]$false
-    WindowsUpdateDrivers = [bool]$false
-    WindowsDefenderUpdate = [bool]$false
+    WindowsUpdate = [bool]$true
+    WindowsUpdateDrivers = [bool]$true
+    WindowsDefenderUpdate = [bool]$true
     MSCatalogFirmware = [bool]$false
     SetTimeZone = [bool]$true
     ClearDiskConfirm = [bool]$true
@@ -73,13 +73,13 @@ $Global:MyOSDCloud = [ordered]@{
 #$Global:MyOSDCloud.DriverPackName = "None"
 
 #write variables to console
-Write-Host "Pre-Set Varariables for OSDCloud" -ForegroundColor Green
-Write-Output $Global:MyOSDCloud
-Write-Host ""
+# Write-Host "Pre-Set Varariables for OSDCloud" -ForegroundColor Green
+# Write-Output $Global:MyOSDCloud
+# Write-Host ""
 
-Write-Host "Updating Surface Driver Catalog..." -ForegroundColor Cyan
-Invoke-Expression (Invoke-RestMethod "https://raw.githubusercontent.com/everydayintech/OSDCloud-Public/main/Catalogs/Update-OSDCloudSurfaceDriverCatalogJustInTime.ps1")
-Update-OSDCloudSurfaceDriverCatalogJustInTime
+# Write-Host "Updating Surface Driver Catalog..." -ForegroundColor Cyan
+# Invoke-Expression (Invoke-RestMethod "https://raw.githubusercontent.com/everydayintech/OSDCloud-Public/main/Catalogs/Update-OSDCloudSurfaceDriverCatalogJustInTime.ps1")
+# Update-OSDCloudSurfaceDriverCatalogJustInTime
 
 
 #endregion
