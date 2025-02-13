@@ -1,6 +1,6 @@
 <#
 
-OSDCloud Wrapper Script v1 2025-02-12
+OSDCloud Windows 10 Pro Wrapper Script v1 2025-02-13
 
 This will set the variables used by OSDCloud, update the MS Surface Drivers Catalog, then start OSDCloud, along with do a few things after
 
@@ -118,6 +118,7 @@ function New-SetupCompleteOSDCloudFiles{
     }
     #endregion
 
+    
 Write-Host "OSDCloud process complete, running custom actions from script before reboot"
 
 Write-Host "Creating custom SetupComplete files"
