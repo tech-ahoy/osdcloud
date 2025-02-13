@@ -2,12 +2,12 @@
 do {
     Clear-Host
     Write-Host "====================================="
-    Write-Host "   ⚓︎⚓︎⚓︎⚓︎  OSDCloud Menu  ⚓︎⚓︎⚓︎⚓︎         "
+    Write-Host "      ⚓︎⚓︎⚓︎⚓︎  OSDCloud Menu  ⚓︎⚓︎⚓︎⚓︎      "
     Write-Host "====================================="
-    Write-Host "1. Option 1: Windows 11 Pro 24H2 OOBE"
-    Write-Host "2. Option 2: Windows 11 Pro 24H2 Autounattend"
-    Write-Host "3. Option 3: Windows 10 Pro 22H2 OOBE"
-    Write-Host "4. Option 4: Exit"
+    Write-Host "1. Windows 11 Pro 24H2 OOBE"
+    Write-Host "2. Windows 11 Pro 24H2 Autounattend"
+    Write-Host "3. Windows 10 Pro 22H2 OOBE"
+    Write-Host "4. Exit"
     Write-Host "====================================="
     $choice = Read-Host "Please select an option (1-4)"
     
