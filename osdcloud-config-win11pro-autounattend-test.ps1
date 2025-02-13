@@ -120,7 +120,7 @@ function New-SetupCompleteOSDCloudFiles{
 
 # Store unattend.xml contents in array
 
-$UnattendXml = @ '
+$UnattendXml = @'
 <?xml version="1.0" encoding="utf-8"?>
 <unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
     <settings pass="specialize">
