@@ -2,7 +2,7 @@
 do {
     Clear-Host
     Write-Host "====================================="
-    Write-Host "      ⚓︎⚓︎⚓︎⚓︎  OSDCloud Menu  ⚓︎⚓︎⚓︎⚓︎      "
+    Write-Host "            OSDCloud Menu            "
     Write-Host "====================================="
     Write-Host "1. Windows 11 Pro 24H2 OOBE"
     Write-Host "2. Windows 11 Pro 24H2 Autounattend"
@@ -19,6 +19,7 @@ do {
         }
         2 {
             Write-Host "`nSelected: Windows 11 Pro 24H2 Autounattend" -ForegroundColor Cyan
+            Invoke-RestMethod "https://raw.githubusercontent.com/tech-ahoy/osdcloud/refs/heads/main/osdcloud-config-win11pro-autounattend-test.ps1" | Invoke-Expression
             Write-Host "Nothing to see here"
             Pause
         }
