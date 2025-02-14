@@ -19,7 +19,7 @@ do {
         }
         2 {
             Write-Host "`nSelected: Windows 11 Pro 24H2 Autounattend" -ForegroundColor Cyan
-            Invoke-RestMethod "https://raw.githubusercontent.com/tech-ahoy/osdcloud/refs/heads/main/osdcloud-config-win11pro-autounattend-test.ps1" | Invoke-Expression
+            Invoke-RestMethod "https://raw.githubusercontent.com/tech-ahoy/osdcloud/refs/heads/main/osdcloud-config-win11pro-autounattend.ps1" | Invoke-Expression
         }
         3 {
             Write-Host "`nSelected: Windows 10 Pro 22H2 OOBE" -ForegroundColor Cyan
