@@ -36,7 +36,7 @@
 				</LocalAccounts>
 			</UserAccounts>
 			<OOBE>
-				<ProtectYourPC>3</ProtectYourPC>
+				<ProtectYourPC>1</ProtectYourPC>
 				<HideEULAPage>true</HideEULAPage>
 				<HideWirelessSetupInOOBE>false</HideWirelessSetupInOOBE>
 				<HideOnlineAccountScreens>false</HideOnlineAccountScreens>
