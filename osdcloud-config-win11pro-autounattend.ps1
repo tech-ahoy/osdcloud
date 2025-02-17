@@ -1,6 +1,6 @@
 <#
 
-OSDCloud Wrapper Script v1 2025-02-12
+OSDCloud Wrapper Script 2025-02-17
 
 This will set the variables used by OSDCloud, update the MS Surface Drivers Catalog, then start OSDCloud, along with do a few things after
 
