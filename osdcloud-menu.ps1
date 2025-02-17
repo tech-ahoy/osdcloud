@@ -14,7 +14,7 @@ do {
     switch ($choice) {
         1 {
             Write-Host "`nSelected: Windows 11 Pro 24H2 OOBE" -ForegroundColor Cyan
-            Invoke-RestMethod "https://raw.githubusercontent.com/tech-ahoy/osdcloud/refs/heads/main/osdcloud-config-win11pro-v1.ps1" | Invoke-Expression
+            Invoke-RestMethod "https://raw.githubusercontent.com/tech-ahoy/osdcloud/refs/heads/main/osdcloud-config-win11pro-oobe.ps1" | Invoke-Expression
             
         }
         2 {
@@ -23,7 +23,7 @@ do {
         }
         3 {
             Write-Host "`nSelected: Windows 10 Pro 22H2 OOBE" -ForegroundColor Cyan
-            Invoke-RestMethod "https://raw.githubusercontent.com/tech-ahoy/osdcloud/refs/heads/main/osdcloud-config-win10pro-v1.ps1" | Invoke-Expression
+            Invoke-RestMethod "https://raw.githubusercontent.com/tech-ahoy/osdcloud/refs/heads/main/osdcloud-config-win10pro-oobe.ps1" | Invoke-Expression
         }
         4 {
             Write-Host "Exiting the script. Goodbye!" -ForegroundColor Green
