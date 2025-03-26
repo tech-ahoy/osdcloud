@@ -5,12 +5,18 @@ do {
     Write-Host "         Tech Ahoy OSDCloud          "
     Write-Host "====================================="
     Write-Host "1. Windows 11 Pro 24H2 OOBE"
-    Write-Host "2. Windows 11 Pro 24H2 Autopilot (no NinjaOne agent)"
+    Write-Host 
+    Write-Host "2. Windows 11 Pro 24H2 Autopilot"
+    Write-Host
     Write-Host "3. Windows 11 Pro 24H2 Autounattend"
+    Write-Host
     Write-Host "4. Windows 11 Pro 23H2 OOBE"
+    Write-Host
     Write-Host "5. Windows 10 Pro 22H2 OOBE"
+    Write-Host
     Write-Host "6. Exit"
     Write-Host "====================================="
+    Write-Host
     $choice = Read-Host "Please select an option (1-4)"
     
     switch ($choice) {
